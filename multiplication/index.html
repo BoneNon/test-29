@@ -1,0 +1,26 @@
+<html>
+ <head>
+  <title>โปรแกรมแสดงแม่สูตรคูณ</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ </head>
+ <body>
+ สูตรคูณแม่ <input type="number" name="number" id="number"> - <input type="number" name="number2" id="number2"> <input type="button" value="แสดงแม่สูตรคูณ" onclick="show()">
+ <div id="divShow"></div>
+ </body>
+ <script language="JavaScript">
+    function show()
+    {
+     var number = parseInt(document.getElementById("number").value);
+     var number2 = parseInt(document.getElementById("number2").value);
+     var objDiv = document.getElementById("divShow"); 
+
+    for( var i=number; i<=number2; i++ ) {
+        objDiv.innerHTML += "<br/>"+"แม่สูตรคูณ แม่"+i+"<br/>";
+        for( var j=1; j<=12; j++ ) {
+            console.log( i+" x "+j+" = "+( i * j ) );
+            objDiv.innerHTML += j + " x " + i + " = " +  i * j + "<br/>";
+        }
+    }
+    }
+    </script>
+</html>
