@@ -21,7 +21,7 @@
 	  if ($id != 0) {
 	    $data = $user->fetch($id);
 	  } else {
-	    $data = $user->fetch();
+	    $data = $user->fetchall();
 	  }
 	  echo json_encode($data);
 	}

@@ -16,6 +16,14 @@
 	    return $rows;
 	  }
 
+	  public function fetchall() {
+	    $sql = 'SELECT * FROM users';
+	    $stmt = $this->conn->prepare($sql);
+	    $stmt->execute();
+	    $rows = $stmt->fetchAll();
+	    return $rows;
+	  }
+
 	  // Insert an user in the database
 	  public function insert($name, $email, $phone) {
 	    $sql = 'INSERT INTO users (name, email, phone) VALUES (:name, :email, :phone)';
